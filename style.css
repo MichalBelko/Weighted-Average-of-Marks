@@ -37,9 +37,10 @@ picture {
   --black-color: linear-gradient(to left, #a1ffce, #faffd1);
   --text-color: #000;
   --bg-color: #7bbacf;
-  --bgdarkest-color: #3b92af;
+  --bgdarkest-color: #3f9dbd;
   --wrapperbg: rgba(116, 148, 255, 0.253);
   --bgdark-color: rgba(185, 236, 253, 0.205);
+  --specialColor: hsla(195, 50%, 46%, 0.849);
 }
 :root {
   --body-color: linear-gradient(to right, #2c5364, #203a43, #0f2027);
@@ -49,6 +50,7 @@ picture {
   --bgdark-color: #0f252c;
   --bgdarkest-color: #0d2229;
   --wrapperbg: rgba(134, 134, 134, 0.137);
+  --specialColor: hsla(196, 54%, 11%, 0.726);
 }
 
 body {
@@ -113,6 +115,12 @@ body {
   transition: transform 0.25s ease, box-shadow 0.25s ease,
     background-color 0.25s ease;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.178);
+}
+#calculateBtn {
+  background-color: var(--specialColor);
+}
+#calculateBtn:hover {
+  background-color: var(--bgdarkest-color);
 }
 
 .pushUpBtn:hover {
@@ -191,7 +199,7 @@ footer p {
 .fa-moon {
   font-family: "FontAwesome";
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   top: 10px;
   right: 10px;
   width: 45px;
