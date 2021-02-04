@@ -127,6 +127,10 @@ p span {
   font-weight: bold;
   color: var(--text-color);
 }
+.fas {
+  display: block !important;
+  line-height: 1.5 !important;
+}
 footer {
   text-align: center;
   font-size: 1.3rem;
@@ -144,6 +148,10 @@ footer {
   width: 200px;
   text-align: center;
   transition: 0.5s all;
+  border: 3px solid var(--text-color);
+  background-color: transparent;
+  border-radius: 3px;
+  color: var(--text-color);
 }
 footer p {
   animation-delay: 1s;
@@ -178,11 +186,6 @@ footer p {
 .borderLeftRight:hover {
   cursor: pointer;
 }
-.fa-plus {
-  font-family: "FontAwesome";
-  margin-left: 0.3rem;
-  transform: scale(0.8);
-}
 
 .fa-moon {
   font-family: "FontAwesome";
@@ -197,9 +200,7 @@ footer p {
   transform: rotate(-25deg);
   animation-delay: 1s;
 }
-.fas {
-  line-height: 1.5 !important;
-}
+
 /* media
 media
 media */
