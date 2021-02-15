@@ -4,6 +4,7 @@ const grade = document.getElementsByClassName("grade");
 const weight = document.getElementsByClassName("weight");
 const priemer = document.querySelector(".priemer");
 const toggler = document.querySelector(".fas");
+const live = document.getElementById("live");
 
 addBtn.addEventListener("click", function () {
   const GradesRow = document.createElement("div");
@@ -62,3 +63,19 @@ let setDarkMode = localStorage.getItem("dark");
 if (setDarkMode === "on") {
   darkMode();
 }
+
+setInterval(() => {
+  const today = new Date();
+  const cas =
+    new Intl.DateTimeFormat(navigator.language, {
+      day: "numeric",
+      month: "numeric",
+      year: "numeric",
+    }).format(today) +
+    " " +
+    new Intl.DateTimeFormat(navigator.language, {
+      hour: "numeric",
+      minute: "numeric",
+    }).format(today);
+  live.textContent = cas;
+}, 1);
